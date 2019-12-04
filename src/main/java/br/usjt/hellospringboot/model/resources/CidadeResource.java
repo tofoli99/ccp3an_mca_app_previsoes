@@ -36,7 +36,7 @@ public class CidadeResource {
 	}
 
 	@GetMapping("/letra")
-	public List<Cidade> todasCidadesLetra(String letra) {
+	public List<Cidade> todasCidadesIgnore(String letra) {
 		return cidadeRepo.findByNomeIgnoreCase(letra);
 	}
 

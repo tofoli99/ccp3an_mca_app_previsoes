@@ -20,7 +20,7 @@ import lombok.Setter;
 @Setter
 @Entity(name="previsoes")
 @NamedQuery (name = "Cidade.buscarPelaLatitudeEPelaLongitude",
-query = "SELECT c FROM Cidade c WHERE latitude = :latitude AND longitude = :longitude")
+query = "SELECT * FROM Cidade c WHERE latitude = :latitude AND longitude = :longitude")
 public class Previsao implements Serializable{
 	private static final long serialVersionUID = 1L;
 	@Id

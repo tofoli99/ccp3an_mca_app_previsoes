@@ -17,10 +17,10 @@ public interface CidadeRepository extends JpaRepository<Cidade, Long> {
 
 	public Cidade findByLatitudeAndLongitude (Double latitude, Double longitude); 
 
-	@Query("SELECT c FROM Cidade c WHERE c.nome = :nome")
+	@Query("SELECT * FROM Cidade c WHERE c.nome = :nome")
 	public Cidade findByNome1 (String nome);
 
-	@Query("SELECT c FROM Cidade c WHERE c.nome ILIKE ?%")
+	@Query("SELECT * FROM Cidade c WHERE c.nome LIKE ?%")
 	public List<Cidade> findByNomeIgnoreCase (String nome);
 
 
