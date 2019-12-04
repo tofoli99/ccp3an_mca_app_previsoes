@@ -15,10 +15,10 @@ public interface CidadeRepository extends JpaRepository<Cidade, Long> {
 	@Async
 	public Future<List<Cidade>> findByNome (String nome);
 
-	public Cidade findByLatitudeAndLongitude (Double latitude, Double longitude); 
+	public Cidade findByOneLatitudeAndLongitude (Double latitude, Double longitude); 
 
 	@Query("SELECT * FROM Cidade c WHERE c.nome = :nome")
-	public Cidade findByNome1 (String nome);
+	public Cidade findByNomee (String nome);
 
 	@Query("SELECT * FROM Cidade c WHERE c.nome LIKE ?%")
 	public List<Cidade> findByNomeIgnoreCase (String nome);
