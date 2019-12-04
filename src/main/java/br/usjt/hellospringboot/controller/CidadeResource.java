@@ -25,7 +25,7 @@ public class CidadeResource {
 	@Autowired
 	private CidadeRepository cidadeRepo;
 	
-	@GetMapping(value= {"/{latitude}","/{longitude}"})
+	@GetMapping(value= {"/{latitude}/{longitude}"})
 	public Cidade buscarPelaLat(@PathVariable Double latitude, Double longitude) {
 		return cidadeRepo.findByOneLatitudeAndLongitude(latitude, longitude);
 	}
