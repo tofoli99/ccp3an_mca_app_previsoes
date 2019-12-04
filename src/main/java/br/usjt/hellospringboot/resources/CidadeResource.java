@@ -1,4 +1,4 @@
-package br.usjt.hellospringboot.model.resources;
+package br.usjt.hellospringboot.resources;
 
 import java.net.URI;
 import java.util.List;
